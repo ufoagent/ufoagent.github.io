@@ -116,11 +116,6 @@
   .feature b{font-family:"Syne"}
   .feature span{color:#d8caf4;font-size:.96rem}
 
-  .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
-  .trust div{border:2px dashed #ffffff2e;border-radius:16px;padding:20px}
-  .trust .big{font-size:1.7rem}
-  .trust b{font-family:"Syne";display:block;margin-top:.3rem}
-  .trust .fineprint{display:block;margin-top:.4rem}
 
   .final{text-align:center;background:linear-gradient(120deg,#ff2d87,#9b5cff);color:var(--cream);
     border:3px solid #0b0710;border-radius:28px;padding:54px 24px;box-shadow:10px 10px 0 #0b0710;margin:20px 0}
@@ -131,7 +126,6 @@
   @media(max-width:780px){
     .steps{grid-template-columns:1fr}
     .room{grid-template-columns:1fr}
-    .trust{grid-template-columns:1fr}
     .nav-cta-hide{display:none}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important}}
@@ -156,7 +150,6 @@
   <p class="sub rv" style="animation-delay:.22s">Turn any Windows PC into an AI agent — and command a whole fleet from one screen.</p>
   <div class="cta-row rv" style="animation-delay:.3s">
     <a class="btn mag" href="https://github.com/ufoagent/ufoagent-node/releases/latest/download/ufoagent-setup.exe">⬇ Download for Windows</a>
-    <a class="btn ghost" href="#how">See how it works ↓</a>
   </div>
 </header>
 
@@ -204,18 +197,9 @@
 <section class="wrap">
   <div class="kicker">The powerful part</div>
   <h2>Command your whole <span style="color:var(--lime)">fleet</span> from one screen.</h2>
-  <p style="max-width:600px;color:var(--muted);margin:10px 0 0">That screen is <b style="color:var(--cream)">mission control</b>, at <a href="https://app.ufoagent.xyz" style="color:var(--cyan)">app.ufoagent.xyz</a> — sign in with GitHub, approve each machine's pairing code, and your whole fleet shows up there.</p>
   <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
     <a class="btn lime" href="https://app.ufoagent.xyz">Open mission control →</a>
     <a class="btn ghost" href="https://app.ufoagent.xyz/preview">Peek at a live demo</a>
-  </div>
-</section>
-
-<section class="wrap">
-  <div class="trust">
-    <div><div class="big">🔒</div><b>No keys on your PCs</b><span class="fineprint">Agents get short-lived credentials that expire on their own.</span></div>
-    <div><div class="big">🌍</div><b>Open source</b><span class="fineprint">The agent that runs on your machine is fully public.</span></div>
-    <div><div class="big">🕹️</div><b>You're in command</b><span class="fineprint">Start, stop, or pull the plug on any agent, any time.</span></div>
   </div>
 </section>
 
