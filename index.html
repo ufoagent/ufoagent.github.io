@@ -117,11 +117,18 @@
   .feature span{color:#d8caf4;font-size:.96rem}
 
 
-  .final{text-align:center;background:linear-gradient(120deg,#ff2d87,#9b5cff);color:var(--cream);
-    border:3px solid #0b0710;border-radius:28px;padding:54px 24px;box-shadow:10px 10px 0 #0b0710;margin:20px 0}
-  .final h2{font-size:clamp(2.2rem,7vw,4rem)}
+  img.zoomable{cursor:zoom-in}
+  .lightbox{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;
+    padding:28px;background:#0b0710e8;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:96vw;max-height:92vh;border:2px solid #0b0710;border-radius:12px;box-shadow:0 24px 80px #000c;background:#0b0710}
+
   footer{padding:40px 0 70px;text-align:center;color:var(--muted);font-family:"Space Mono";font-size:.82rem}
-  footer a{color:var(--lime);text-decoration:none}
+  footer .icons{display:flex;gap:22px;justify-content:center;align-items:center}
+  footer a.icon{color:var(--muted);text-decoration:none;font-size:1.5rem;display:inline-flex;opacity:.8;transition:opacity .12s,color .12s}
+  footer a.icon:hover{opacity:1;color:var(--cream)}
+  footer a.icon svg{width:26px;height:26px;fill:currentColor}
+  footer .legal{margin-top:14px;font-size:.72rem;opacity:.7}
 
   @media(max-width:780px){
     .steps{grid-template-columns:1fr}
@@ -164,11 +171,11 @@
       </div>
     </div>
     <div class="card"><span class="emoji">⚡</span><div class="num mono" style="color:var(--magenta)">02</div><h3>Install</h3>
-      <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/install-screen.png" alt="The UFOAgent installer running" loading="lazy"
+      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/install-screen.png" alt="The UFOAgent installer running" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:10px;background:#0b0710;display:block;margin-top:10px">
     </div>
     <div class="card"><span class="emoji">🔗</span><div class="num mono" style="color:var(--magenta)">03</div><h3>Link</h3>
-      <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/link-screen.png" alt="The pairing QR code the agent shows after install" loading="lazy"
+      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/link-screen.png" alt="The pairing QR code the agent shows after install" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:10px;background:#0b0710;display:block;margin-top:10px">
     </div>
   </div>
@@ -177,46 +184,42 @@
 <section class="wrap" id="proof">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
     <figure style="margin:0">
-      <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/remote-task.gif" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/remote-task.png'" alt="Timelapse of a job fired from mission control: UFO2 launches Notepad and types the message on a real machine" loading="lazy"
+      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/remote-task.gif" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/remote-task.png'" alt="Timelapse of a job fired from mission control: UFO2 launches Notepad and types the message on a real machine" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:12px;box-shadow:5px 5px 0 #0b0710;background:#0b0710;display:block">
       <figcaption class="mono" style="font-size:.82rem;opacity:.8;margin-top:10px">A job sent from mission control, recorded live in CI — watch the agent launch Notepad and type the message on a real PC.</figcaption>
     </figure>
     <figure style="margin:0">
-      <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/local-task.gif" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/local-task.png'" alt="Timelapse of the same task run locally: UFO2 opens Notepad on the machine itself and types" loading="lazy"
+      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/local-task.gif" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/local-task.png'" alt="Timelapse of the same task run locally: UFO2 opens Notepad on the machine itself and types" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:12px;box-shadow:5px 5px 0 #0b0710;background:#0b0710;display:block">
       <figcaption class="mono" style="font-size:.82rem;opacity:.8;margin-top:10px">…and the same agent doing it on the machine itself — every click and keystroke real, end to end.</figcaption>
     </figure>
     <figure style="margin:0">
-      <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/activity-summary.png" alt="An on-device plain-English recap of what the agent has been doing" loading="lazy"
+      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/activity-summary.png" alt="An on-device plain-English recap of what the agent has been doing" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:12px;box-shadow:5px 5px 0 #0b0710;background:#0b0710;display:block">
       <figcaption class="mono" style="font-size:.82rem;opacity:.8;margin-top:10px">Ask the machine "what have you been up to?" — it writes you a plain-English recap, on the device.</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="wrap">
-  <div class="kicker">The powerful part</div>
-  <h2>Command your whole <span style="color:var(--lime)">fleet</span> from one screen.</h2>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
-    <a class="btn lime" href="https://app.ufoagent.xyz">Open mission control →</a>
-    <a class="btn ghost" href="https://app.ufoagent.xyz/preview">Peek at a live demo</a>
-  </div>
-</section>
-
-<section class="wrap">
-  <div class="final">
-    <div class="mono" style="letter-spacing:.16em;font-size:.8rem;opacity:.9">READY FOR LIFTOFF?</div>
-    <h2>Beam it down.</h2>
-    <p style="max-width:520px;margin:0 auto 26px;font-size:1.1rem">Install it on one PC in under a minute. Add the rest whenever you're ready.</p>
-    <a class="btn lime" href="https://github.com/ufoagent/ufoagent-node/releases/latest/download/ufoagent-setup.exe">⬇ Download for Windows</a>
-    <div class="fineprint" style="margin-top:14px"><a href="https://github.com/ufoagent/ufoagent-node/releases/download/beta/ufoagent-setup.exe" style="color:inherit">or grab the rolling beta 🧪 — every build passed the full test suite</a></div>
-  </div>
-</section>
-
 <footer>
-  🛸 UFOAGENT · <a href="https://app.ufoagent.xyz">mission control</a> · <a href="https://github.com/ufoagent/ufoagent-node">open-source agent on GitHub</a><br>
-  Not affiliated with Microsoft. Built on the MIT-licensed UFO2 project.
+  <div class="icons">
+    <a class="icon" href="https://app.ufoagent.xyz" title="Mission control" aria-label="Mission control">🛸</a>
+    <a class="icon" href="https://github.com/ufoagent/ufoagent-node" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+  </div>
+  <div class="legal">© 2026 UFOAgent, Inc.</div>
 </footer>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer"><img alt=""></div>
+<script>
+  var lb = document.getElementById('lightbox'), lbi = lb.querySelector('img');
+  document.querySelectorAll('img.zoomable').forEach(function (im) {
+    im.addEventListener('click', function () {
+      lbi.src = im.currentSrc || im.src; lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    });
+  });
+  function lbClose() { lb.classList.remove('open'); lbi.removeAttribute('src'); document.body.style.overflow = ''; }
+  lb.addEventListener('click', lbClose);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lbClose(); });
+</script>
 </body>
 </html>
