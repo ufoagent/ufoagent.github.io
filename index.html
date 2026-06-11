@@ -160,25 +160,26 @@
 <section id="how" class="wrap">
   <div class="kicker">The easy part</div>
   <h2>Zero to agent in <span style="color:var(--magenta)">one click</span>.</h2>
-  <p class="lead">Running a desktop AI agent used to mean wrestling with installers, config files and secret keys. We turned all of it into a double-click. Under the hood it's Microsoft's UFO2 — you'll never have to know that.</p>
   <div class="steps">
-    <div class="card"><span class="emoji">⬇️</span><div class="num mono" style="color:var(--magenta)">01</div><h3>Download</h3><p>One small installer. No accounts to wire up, nothing to read.</p></div>
-    <div class="card"><span class="emoji">⚡</span><div class="num mono" style="color:var(--magenta)">02</div><h3>Install</h3><p>It sets everything up for you and quietly runs in the background.</p></div>
-    <div class="card"><span class="emoji">🔗</span><div class="num mono" style="color:var(--magenta)">03</div><h3>Link</h3><p>Type the short pairing code it shows. Done — that PC is now an agent.</p></div>
-  </div>
-  <div class="no-list">
-    <span class="chip"><b>✕</b> no API keys</span>
-    <span class="chip"><b>✕</b> no config files</span>
-    <span class="chip"><b>✕</b> no terminal</span>
-    <span class="chip"><b>✓</b> credentials handled for you, automatically</span>
+    <div class="card"><span class="emoji">⬇️</span><div class="num mono" style="color:var(--magenta)">01</div><h3>Download</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+        <a class="btn mag" href="https://github.com/ufoagent/ufoagent-node/releases/latest/download/ufoagent-setup.exe">⬇ Stable</a>
+        <a class="btn" style="background:transparent;color:#1a1024;border-color:#0b0710;box-shadow:none" href="https://github.com/ufoagent/ufoagent-node/releases/download/beta/ufoagent-setup.exe">Beta 🧪</a>
+      </div>
+    </div>
+    <div class="card"><span class="emoji">⚡</span><div class="num mono" style="color:var(--magenta)">02</div><h3>Install</h3>
+      <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/install-screen.png" alt="The UFOAgent installer running" loading="lazy"
+        style="width:100%;border:2px solid #0b0710;border-radius:10px;background:#0b0710;display:block;margin-top:10px">
+    </div>
+    <div class="card"><span class="emoji">🔗</span><div class="num mono" style="color:var(--magenta)">03</div><h3>Link</h3>
+      <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/link-screen.png" alt="The pairing QR code the agent shows after install" loading="lazy"
+        style="width:100%;border:2px solid #0b0710;border-radius:10px;background:#0b0710;display:block;margin-top:10px">
+    </div>
   </div>
 </section>
 
 <section class="wrap" id="proof">
-  <div class="kicker">Not a mockup</div>
-  <h2>See it <span style="color:var(--magenta)">actually working</span>.</h2>
-  <p class="lead">These aren't staged. Our tests run on a fresh Windows machine every single build — link it, fire a task from the dashboard, and watch the agent do it for real. Here's what the latest passing build captured.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:26px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
     <figure style="margin:0">
       <img src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/remote-task.png" alt="A task fired from the dashboard opening Notepad on a real machine" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:12px;box-shadow:5px 5px 0 #0b0710;background:#0b0710;display:block">
@@ -200,23 +201,7 @@
 <section class="wrap">
   <div class="kicker">The powerful part</div>
   <h2>Command your whole <span style="color:var(--lime)">fleet</span> from one screen.</h2>
-  <div class="room">
-    <div>
-      <p class="lead" style="margin-bottom:8px">One agent is handy. A roomful is a superpower. UFOAgent gives you a single mission control for all of them — your own little mothership.</p>
-      <div class="feature"><span class="ic">👀</span><span><b>See everything.</b> Every machine, what it's up to, and whether it's awake — at a glance.</span></div>
-      <div class="feature"><span class="ic">🎛️</span><span><b>Put them to work.</b> Hand out jobs and let your agents run them while you do something else.</span></div>
-      <div class="feature"><span class="ic">✋</span><span><b>Stay in command.</b> Pause, stop, or retire any agent the instant you want to.</span></div>
-      <div class="feature"><span class="ic">📈</span><span><b>Scale in minutes.</b> Add another PC, link it, and it joins the fleet. No limits.</span></div>
-    </div>
-    <div class="console" aria-hidden="true">
-      <div class="console-top"><span>◉ FLEET · MISSION CONTROL</span><span>4 online · 1 idle</span></div>
-      <div class="agent"><span class="led busy"></span><span class="nm">studio-pc</span><span class="task">tidying inbox…</span></div>
-      <div class="agent"><span class="led on"></span><span class="nm">reception-01</span><span class="task">ready</span></div>
-      <div class="agent"><span class="led busy"></span><span class="nm">back-office</span><span class="task">filling forms…</span></div>
-      <div class="agent"><span class="led on"></span><span class="nm">laptop-nia</span><span class="task">ready</span></div>
-      <div class="agent"><span class="led off"></span><span class="nm">spare-rig</span><span class="task">paused</span></div>
-    </div>
-  </div>
+  <a class="btn lime" href="https://app.ufoagent.xyz" style="margin-top:14px">Open mission control →</a>
 </section>
 
 <section class="wrap">
