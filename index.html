@@ -51,6 +51,8 @@
   .btn.ghost{background:transparent;color:var(--cream);border-color:#ffffff44;box-shadow:none}
   .btn:hover{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:7px 7px 0 #0b0710}
   .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #0b0710}
+  .btn.disabled{background:#5b4a78;color:#cfc2e6;cursor:not-allowed;opacity:.75}
+  .btn.disabled:hover,.btn.disabled:active{transform:none;box-shadow:4px 4px 0 #0b0710}
 
   header{position:relative;padding:64px 0 40px;text-align:center}
   .eyebrow{display:inline-block;font-family:"Space Mono";font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
@@ -145,7 +147,7 @@
     <div class="brand"><span class="ufo">🛸</span> UFOAGENT</div>
     <div style="display:flex;gap:10px;align-items:center">
       <a class="btn ghost" href="https://app.ufoagent.xyz">Mission control</a>
-      <a class="btn lime nav-cta-hide" href="https://github.com/ufoagent/ufoagent-node/releases/latest/download/ufoagent-setup.exe">Download ▸</a>
+      <span class="btn disabled nav-cta-hide" aria-disabled="true" title="Downloads are temporarily paused">Downloads paused</span>
     </div>
   </div>
 </nav>
@@ -156,8 +158,9 @@
   <h1 class="rv" style="animation-delay:.12s">Abduct your <span class="pink">busywork</span>.</h1>
   <p class="sub rv" style="animation-delay:.22s">Turn any Windows PC into an AI agent — and command a whole fleet from one screen.</p>
   <div class="cta-row rv" style="animation-delay:.3s">
-    <a class="btn mag" href="https://github.com/ufoagent/ufoagent-node/releases/latest/download/ufoagent-setup.exe">⬇ Download for Windows</a>
+    <span class="btn disabled" aria-disabled="true" title="Downloads are temporarily paused">⏸ Downloads paused</span>
   </div>
+  <p class="fineprint rv" style="animation-delay:.36s">Downloads are temporarily paused while we fix the site — back soon.</p>
 </header>
 
 <section id="how" class="wrap">
@@ -166,9 +169,10 @@
   <div class="steps">
     <div class="card"><span class="emoji">⬇️</span><div class="num mono" style="color:var(--magenta)">01</div><h3>Download</h3>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-        <a class="btn mag" href="https://github.com/ufoagent/ufoagent-node/releases/latest/download/ufoagent-setup.exe">⬇ Stable</a>
-        <a class="btn" style="background:transparent;color:#1a1024;border-color:#0b0710;box-shadow:none" href="https://github.com/ufoagent/ufoagent-node/releases/download/beta/ufoagent-setup.exe">Beta 🧪</a>
+        <span class="btn disabled" aria-disabled="true" title="Downloads are temporarily paused">⬇ Stable</span>
+        <span class="btn disabled" aria-disabled="true" title="Downloads are temporarily paused">Beta 🧪</span>
       </div>
+      <p style="margin-top:10px">Temporarily paused — back soon.</p>
     </div>
     <div class="card"><span class="emoji">⚡</span><div class="num mono" style="color:var(--magenta)">02</div><h3>Install</h3>
       <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/install-screen.png" alt="The UFOAgent installer running" loading="lazy"
