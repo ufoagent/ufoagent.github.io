@@ -76,6 +76,35 @@
   @keyframes beam{0%,100%{opacity:.5}50%{opacity:.95}}
   @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 
+  /* "robot scans QR -> signs in to GitHub" hero accent (synthetic; the Link card uses the real recorded QR) */
+  .robot-card{max-width:330px;margin:22px auto 0;background:var(--paper);border:2px solid #0b0710;border-radius:16px;box-shadow:6px 6px 0 #0b0710;padding:14px}
+  .robot-card .cap{font-family:"Space Mono";font-size:.72rem;color:#4a3a5e;text-align:center;margin:8px 0 0}
+  .robotqr{display:block;width:100%;height:auto}
+  .rq-bob{animation:rq-bob 3.2s ease-in-out infinite}
+  @keyframes rq-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .rq-eye{animation:rq-blink 3.8s infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes rq-blink{0%,93%,100%{transform:scaleY(1)}96.5%{transform:scaleY(.12)}}
+  .rq-anttip{animation:rq-tip 1.5s ease-in-out infinite}
+  @keyframes rq-tip{0%,100%{opacity:.35}50%{opacity:1}}
+  .rq-beam{opacity:0;animation:rq-scan 4.6s ease-in-out infinite}
+  @keyframes rq-scan{0%{opacity:0;transform:translateY(0)}6%{opacity:.95}40%{opacity:.95;transform:translateY(60px)}48%{opacity:0;transform:translateY(60px)}100%{opacity:0;transform:translateY(0)}}
+  .rq-mod{animation:rq-flick 4.6s ease-in-out infinite}
+  @keyframes rq-flick{0%,8%{opacity:.25}24%{opacity:1}100%{opacity:1}}
+  .rq-wire{stroke-dasharray:44;stroke-dashoffset:44;animation:rq-wire 4.6s ease-in-out infinite}
+  @keyframes rq-wire{0%,46%{stroke-dashoffset:44}56%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:44}}
+  .rq-spark{opacity:0;animation:rq-spark 4.6s linear infinite}
+  @keyframes rq-spark{0%,48%{opacity:0;transform:translateX(0)}50%{opacity:1}58%{opacity:1;transform:translateX(40px)}62%{opacity:0;transform:translateX(40px)}100%{opacity:0}}
+  .rq-gh{fill:#c3b3df;animation:rq-light 4.6s ease-in-out infinite}
+  @keyframes rq-light{0%,54%{fill:#c3b3df}64%,93%{fill:#0b0710}100%{fill:#c3b3df}}
+  .rq-check{opacity:0;transform:scale(.2);transform-origin:332px 58px;animation:rq-pop 4.6s ease-in-out infinite}
+  @keyframes rq-pop{0%,60%{opacity:0;transform:scale(.2)}68%{opacity:1;transform:scale(1.18)}74%{transform:scale(1)}92%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.2)}}
+  .rq-cap{opacity:0;animation:rq-cap 4.6s ease-in-out infinite}
+  @keyframes rq-cap{0%,62%{opacity:0}70%,93%{opacity:1}100%{opacity:0}}
+  @media(prefers-reduced-motion:reduce){
+    .rq-beam,.rq-spark{opacity:0}.rq-mod{opacity:1}.rq-wire{stroke-dashoffset:0}
+    .rq-gh{fill:#0b0710}.rq-check{opacity:1;transform:scale(1)}.rq-cap{opacity:1}
+  }
+
   .marquee{margin:30px 0;border-top:2px solid #0b0710;border-bottom:2px solid #0b0710;background:var(--magenta);
     overflow:hidden;transform:rotate(-1deg)}
   .marquee .track{display:inline-block;white-space:nowrap;font-family:"Syne";font-weight:800;font-size:1.1rem;
@@ -162,6 +191,53 @@
     <a class="btn ghost" href="#how">See how it works ↓</a>
   </div>
   <p class="fineprint rv" style="animation-delay:.36s">Rolling beta · Windows 10/11 · free while in beta.</p>
+  <div class="robot-card rv" style="animation-delay:.44s">
+    <svg class="robotqr" viewBox="0 0 380 180" role="img" aria-label="A robot scans a QR code and signs in to GitHub">
+      <g class="rq-bob">
+        <line x1="58" y1="56" x2="58" y2="38" stroke="#0b0710" stroke-width="4" stroke-linecap="round"/>
+        <circle class="rq-anttip" cx="58" cy="35" r="4.5" fill="#ff2d87"/>
+        <rect x="22" y="56" width="74" height="60" rx="15" fill="#b9ff3a" stroke="#0b0710" stroke-width="4"/>
+        <rect x="36" y="116" width="46" height="14" rx="6" fill="#b9ff3a" stroke="#0b0710" stroke-width="4"/>
+        <g class="rq-eye"><circle cx="47" cy="84" r="7.5" fill="#0b0710"/><circle cx="49.5" cy="81.5" r="2.2" fill="#fff6ec"/></g>
+        <g class="rq-eye"><circle cx="73" cy="84" r="7.5" fill="#0b0710"/><circle cx="75.5" cy="81.5" r="2.2" fill="#fff6ec"/></g>
+        <rect x="50" y="98" width="20" height="6" rx="3" fill="#0b0710"/>
+        <path d="M96 78 L108 84 L96 90 Z" fill="#ff2d87" stroke="#0b0710" stroke-width="2.5" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <rect x="150" y="44" width="80" height="80" rx="10" fill="#0b0710" stroke="#0b0710" stroke-width="4"/>
+        <g fill="none" stroke="#b9ff3a" stroke-width="4">
+          <rect x="158" y="52" width="18" height="18" rx="2"/><rect x="204" y="52" width="18" height="18" rx="2"/><rect x="158" y="98" width="18" height="18" rx="2"/>
+        </g>
+        <rect x="163" y="57" width="8" height="8" fill="#b9ff3a"/><rect x="209" y="57" width="8" height="8" fill="#b9ff3a"/><rect x="163" y="103" width="8" height="8" fill="#b9ff3a"/>
+        <g fill="#fff6ec">
+          <rect class="rq-mod" style="animation-delay:.0s"  x="186" y="56" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.1s"  x="196" y="56" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.15s" x="186" y="66" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.2s"  x="206" y="72" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.25s" x="184" y="84" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.3s"  x="196" y="84" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.35s" x="214" y="86" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.4s"  x="184" y="104" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.45s" x="196" y="104" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.5s"  x="186" y="114" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.55s" x="206" y="106" width="6" height="6"/>
+          <rect class="rq-mod" style="animation-delay:.6s"  x="206" y="116" width="6" height="6"/>
+        </g>
+        <rect class="rq-beam" x="152" y="48" width="76" height="7" rx="3" fill="#b9ff3a" opacity=".9" style="filter:drop-shadow(0 0 6px #b9ff3a)"/>
+      </g>
+      <path class="rq-wire" d="M232 84 H266" fill="none" stroke="#9b5cff" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 6"/>
+      <circle class="rq-spark" cx="234" cy="84" r="4" fill="#b9ff3a" style="filter:drop-shadow(0 0 5px #b9ff3a)"/>
+      <g transform="translate(276,55) scale(3.6)">
+        <path class="rq-gh" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+      </g>
+      <g class="rq-check">
+        <circle cx="332" cy="58" r="13" fill="#b9ff3a" stroke="#0b0710" stroke-width="3"/>
+        <path d="M326 58 l4 4 l8 -9" fill="none" stroke="#0b0710" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text class="rq-cap" x="304" y="118" text-anchor="middle" font-family="'Space Mono',monospace" font-size="11" fill="#1a1024">authorized ✓</text>
+    </svg>
+    <p class="cap">no keys to copy — it signs in with GitHub</p>
+  </div>
 </header>
 
 <section id="how" class="wrap">
@@ -180,7 +256,7 @@
         style="width:100%;border:2px solid #0b0710;border-radius:10px;background:#0b0710;display:block;margin-top:10px">
     </div>
     <div class="card"><span class="emoji">🔗</span><div class="num mono" style="color:var(--magenta)">03</div><h3>Link</h3>
-      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/link-screen.png" alt="The pairing QR code the agent shows after install" loading="lazy"
+      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/link-screen.gif" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/link-screen.png'" alt="The pairing QR code the agent shows after install — scan to link" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:10px;background:#0b0710;display:block;margin-top:10px">
     </div>
   </div>
