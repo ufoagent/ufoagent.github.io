@@ -146,6 +146,10 @@
   .feature .ic{font-size:1.5rem;flex:none}
   .feature b{font-family:"Syne"}
   .feature span{color:#d8caf4;font-size:.96rem}
+  .artifact{background:linear-gradient(#160e29,#0e0820);border:2px solid #0b0710;border-radius:20px;padding:14px;
+    box-shadow:9px 9px 0 #0b0710}
+  .artifact img{width:100%;border:2px solid #0b0710;border-radius:12px;background:#0b0710;display:block}
+  .artifact figcaption{font-family:"Space Mono";font-size:.78rem;color:var(--muted);margin-top:10px}
 
 
   img.zoomable{cursor:zoom-in}
@@ -267,6 +271,27 @@
       <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/mission-control.gif" alt="Mission control demo showing a live desktop, command history, and the tray activity summary at the end" loading="lazy"
         style="width:100%;border:2px solid #0b0710;border-radius:12px;box-shadow:5px 5px 0 #0b0710;background:#0b0710;display:block">
       <figcaption class="mono" style="font-size:.82rem;opacity:.8;margin-top:10px">One real Windows session: run GUI work, view the live desktop and history, then open the tray recap.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="wrap" id="trajectory">
+  <div class="room">
+    <div>
+      <div class="kicker">Live trajectory</div>
+      <h2>Watch it <span style="color:var(--lime)">think</span>.</h2>
+      <p class="lead">UFOAgent harvests UFO's own step trace: observation, thought, plan, chosen control, action, status, and the annotated screenshot UFO drew for that moment.</p>
+      <div class="feature"><div class="ic">🧠</div><div><b>A brain over the brain.</b><br><span>The overseer LLM watches each node's live trajectory and records verdicts: on-track, off-track, hallucinating, or unsafe.</span></div></div>
+      <div class="feature"><div class="ic">👁️</div><div><b>Observe-only beta.</b><br><span>It watches and flags today. Mid-task halt and interject are built, but gated off until we trust the loop.</span></div></div>
+      <div class="no-list">
+        <span class="chip"><b>real frames</b> no mockups</span>
+        <span class="chip"><b>LLM-curated</b> captions</span>
+        <span class="chip"><b>honest</b> no fake wins</span>
+      </div>
+    </div>
+    <figure class="artifact" style="margin:0">
+      <img class="zoomable" src="https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/ufo-trajectory.gif" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/ufoagent/ufoagent-node/screenshots/ufo-trajectory.png'" alt="LLM-curated UFO trajectory showing real annotated per-step screenshots and grounded captions" loading="lazy">
+      <figcaption>Generated from the latest self-hosted run's harvested UFO logs. If a run fails or gets flagged, it does not get captioned as a win.</figcaption>
     </figure>
   </div>
 </section>
